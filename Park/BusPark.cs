@@ -21,7 +21,7 @@ namespace Park
         {
             Console.WriteLine("Автобусы, находящиеся в пути: ");
 
-            foreach(KeyValuePair<string, (string, string)> key in ParkBuses)
+            foreach(KeyValuePair<string, (string, string)> key in BusesInRout)
             {
                 Console.WriteLine(key.Key);
             }

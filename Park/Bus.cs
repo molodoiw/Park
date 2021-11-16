@@ -35,7 +35,17 @@ namespace Park
 
         public void InputToRout()
         {
-            //BusesInRout.Add();
+            Console.WriteLine("Введите номер маршрута автобуса: ");
+            string num = Console.ReadLine();
+            
+            foreach(KeyValuePair<string, (string, string)> number in ParkBuses)
+            {
+                if (number.Key == num)
+                {
+                    BusesInRout.Add(num, (number.Value.Item1, number.Value.Item2));
+                    ParkBuses.Remove(num);
+                }
+            }
         }
     }
 }
